@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::after {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a,
+li,
+p {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.6rem;
+  margin: 0;
+}
+a {
+  display: block;
+}
+.container {
+  width: 92%;
+  margin: 0 auto;
+}
+/* Botton component */
+/* .btn{
+    padding: 15px;
+} */
+/* Icon circle */
+.circle-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+/* Nav bar top */
+.container-top {
+  background-color: rgb(244, 243, 243);
+}
+.container-bottom {
+  background-color: white;
+}
+.nav-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+}
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0 0 0;
+}
+/* top-left */
+.top-left,
+.top-right {
+  display: flex;
+  gap: 25px;
+}
+.top-left > li > a > img {
+  width: 22px;
+}
+
+/* top-right- */
+.top-right {
+  display: flex;
+  gap: 14px;
+}
+.top-right > li > a {
+  font-size: 1.2rem;
+}
+.top-right > span {
+  font-size: 1.4rem;
+}
+
+/* Nav-bottom */
+.nav-bottom {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px 0 19px 0;
+}
+/* bottom-left */
+.bottom-left {
+  display: flex;
+  gap: 25px;
+}
+.bottom-left > li > a > img {
+  width: 63px;
+}
+/* Bottom middle */
+.bottom-mid {
+  margin-left: 120px;
+  display: flex;
+  gap: 20px;
+}
+
+/* bottom-right */
+.bottom-right {
+  display: flex;
+  gap: 20px;
+}
+.bottom-right > li > a,
+.bottom > li > .btn-search {
+  font-size: 2rem;
+}
+.bottom-right > li > a:hover {
+  background-color: rgb(223, 222, 222);
+}
+.btn-search {
+  display: flex;
+  background-color: #f4f2f2;
+  border-radius: 30px;
+}
+.btn-search:hover {
+  background-color: #e3e2e2;
+}
+.search-place {
+  padding: 10px;
+  border-radius: 0px 30px 30px 0;
+  background-color: transparent;
+}
+input:focus {
+  outline: none;
+}
+
+/* End Header */
+
+/* container-shoe */
+.container-shoe{
+    width:100%; 
+}
+.container-shoe > img{
+    width:100%; 
+}
