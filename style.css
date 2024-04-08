@@ -28,51 +28,60 @@ p {
   color: inherit;
   font-size: 1.6rem;
   margin: 0;
+  font-weight: 490;
 }
-a {
-  display: block;
-}
+
+/* start style the container that create to scope screen of our web page */
 .container {
   width: 92%;
   margin: 0 auto;
 }
-/* Botton component */
-/* .btn{
-    padding: 15px;
-} */
-/* Icon circle */
+/* End width container */
+
+/* Start style for circle icon */
 .circle-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 32.5px;
+  height: 32.5px;
 }
-/* Nav bar top */
-.container-top {
-  background-color: rgb(244, 243, 243);
-}
-.container-bottom {
-  background-color: white;
-}
+/*  End circle icon */
+
+/* ******************************* Start Header ***************************** */
+
+/*Header that contain all nav bar */
 .nav-bar {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: aqua;
+  position: fixed;
+  top: 0;
+  transition: top 0.4s;
 }
+/* End main container (header) */
+
+/* Navigition bar top */
+.container-top {
+  background-color: rgb(244, 243, 243);
+}
+/* End Container top use to scope all nav-top style */
+
+/* Navigition top style */
 .nav-top {
   display: flex;
   justify-content: space-between;
   padding: 5px 0 0 0;
 }
+
 /* top-left */
 .top-left,
 .top-right {
   display: flex;
   gap: 25px;
 }
+
 .top-left > li > a > img {
   width: 22px;
 }
@@ -86,27 +95,39 @@ a {
   font-size: 1.2rem;
 }
 .top-right > span {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+/* /////////////////////////////End Nav Bar top/////////////////////////// */
+
+/* /////////////////////////Start Nav-bottom ///////////////////////////////*/
+.container-bottom {
+  background-color: white;
 }
 
-/* Nav-bottom */
 .nav-bottom {
   display: flex;
   justify-content: space-between;
   background-color: white;
-  padding: 20px 0 19px 0;
+  padding: 15px 0;
 }
+
 /* bottom-left */
 .bottom-left {
   display: flex;
   gap: 25px;
+  justify-content: center;
+  align-items: center;
 }
+
 .bottom-left > li > a > img {
   width: 63px;
 }
+
 /* Bottom middle */
 .bottom-mid {
-  margin-left: 120px;
+   justify-content: center;
+   align-items: center;
   display: flex;
   gap: 20px;
 }
@@ -115,37 +136,55 @@ a {
 .bottom-right {
   display: flex;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
+
 .bottom-right > li > a,
 .bottom > li > .btn-search {
   font-size: 2rem;
 }
+
 .bottom-right > li > a:hover {
   background-color: rgb(223, 222, 222);
 }
 .btn-search {
   display: flex;
-  background-color: #f4f2f2;
+  background-color: #efefef8d;
   border-radius: 30px;
 }
 .btn-search:hover {
   background-color: #e3e2e2;
 }
 .search-place {
-  padding: 10px;
+  padding: 10px 0;
   border-radius: 0px 30px 30px 0;
   background-color: transparent;
+}
+input {
+  width: 125px;
 }
 input:focus {
   outline: none;
 }
+/* //////////////////////////////End Nav bar bottom ////////////////////////// */
 
-/* End Header */
+/* Responsive for nav bar */
 
-/* container-shoe */
-.container-shoe{
-    width:100%; 
+@media (max-width: 1203px) {
+  .bottom-mid > li:nth-child(6){
+   visibility: hidden;
+  }
 }
-.container-shoe > img{
-    width:100%; 
+/********************************** End Header **********************************8 */
+
+/* container-below nav bar */
+.container-show {
+  width: 100%;
+}
+.container-show > img {
+  width: 100%;
+}
+.test {
+  padding-top: 105px;
 }
