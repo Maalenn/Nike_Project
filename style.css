@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 html {
   font-size: 62.5%;
@@ -13,14 +13,13 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
 }
-
 a,
 li,
 p {
@@ -29,6 +28,13 @@ p {
   font-size: 1.6rem;
   margin: 0;
   font-weight: 490;
+}
+/* Button */
+.btn {
+  border-radius: 25px;
+  padding: 5px 10px;
+  color: inherit;
+  font-size: 1.3rem;
 }
 
 /* start style the container that create to scope screen of our web page */
@@ -58,7 +64,7 @@ p {
   flex-direction: column;
   position: fixed;
   top: 0;
-  transition: top 0.4s;
+  transition: top 0.6s;
 }
 /* End main container (header) */
 
@@ -86,6 +92,12 @@ p {
   width: 22px;
 }
 
+/* This style make image opacity */
+.top-left > li > a:hover img,
+.bottom-left > li > a:hover img {
+  opacity: 0.6;
+}
+
 /* top-right- */
 .top-right {
   display: flex;
@@ -94,9 +106,40 @@ p {
 .top-right > li > a {
   font-size: 1.2rem;
 }
+.top-right > li > a:hover {
+  color: rgb(143, 140, 140);
+}
 .top-right > span {
   font-size: 1.5rem;
   margin-top: 2px;
+}
+/* Help drop down */
+.list-drop {
+  position: relative;
+}
+.list-drop:hover .help-drop {
+  display: flex;
+}
+.help-drop {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  padding: 25px 70px 25px 20px;
+  gap: 10px;
+  border-radius: 0 0 7px 7px;
+  position: absolute;
+  width: 260px;
+  top: 30px;
+  right: -20px;
+}
+.help-drop > a {
+  /* display: none; */
+  color: rgb(115, 112, 112);
+  font-size: 1.4rem;
+}
+.help-drop > a:hover {
+  /* display: none; */
+  color: black;
 }
 /* /////////////////////////////End Nav Bar top/////////////////////////// */
 
@@ -126,12 +169,19 @@ p {
 
 /* Bottom middle */
 .bottom-mid {
-   justify-content: center;
-   align-items: center;
+  justify-content: center;
+  align-items: center;
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
+/* Bottom nav bar middle hover */
+.bottom-mid > li > a {
+  padding: 10px;
+}
+.bottom-mid > li > a:hover {
+  border-bottom: 2px solid black;
+}
 /* bottom-right */
 .bottom-right {
   display: flex;
@@ -152,6 +202,7 @@ p {
   display: flex;
   background-color: #efefef8d;
   border-radius: 30px;
+  align-items: center;
 }
 .btn-search:hover {
   background-color: #e3e2e2;
@@ -170,21 +221,82 @@ input:focus {
 /* //////////////////////////////End Nav bar bottom ////////////////////////// */
 
 /* Responsive for nav bar */
-
 @media (max-width: 1203px) {
-  .bottom-mid > li:nth-child(6){
-   visibility: hidden;
+  .bottom-mid > li:nth-child(6) {
+    display: none;
   }
 }
+@media (max-width: 1148px) {
+  .bottom-mid > li:nth-child(5) {
+    display: none;
+  }
+}
+@media (max-width: 1026px) {
+  .bottom-mid > li:nth-child(4) {
+    display: none;
+  }
+}
+@media (max-width: 973px) {
+  .bottom-mid > li:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 959px) {
+  .container-top {
+    display: none;
+  }
+  .bottom-mid > li:nth-child(2),
+  .bottom-mid > li:nth-child(1) {
+    display: none;
+  }
+}
+
 /********************************** End Header **********************************8 */
 
-/* container-below nav bar */
+/* Container Cover */
 .container-show {
   width: 100%;
 }
 .container-show > img {
   width: 100%;
 }
-.test {
+.container-main {
   padding-top: 105px;
+}
+
+/* Cover Info */
+.collection-info,
+.cover-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cover-info {
+  max-width: 550px;
+  padding: 45px;
+  margin: 0 auto;
+}
+.cover-info > h1 {
+  font-size: 50px;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  line-height: 1;
+  padding: 5px 0px 20px 35px;
+}
+.cover-info > p {
+  font-size: 1.3rem;
+}
+.btn-shop {
+  margin-top: 25px;
+  background-color: black;
+  color: white;
+}
+
+/* Trending Section */
+.scroll-container{
+  width: 100%;
+  white-space: nowrap;
+  overflow: auto;
 }
