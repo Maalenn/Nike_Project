@@ -39,7 +39,7 @@ p {
 
 /* start style the container that create to scope screen of our web page */
 .container {
-  width: 92%;
+  max-width: 80%;
   margin: 0 auto;
 }
 /* End width container */
@@ -295,8 +295,67 @@ input:focus {
 }
 
 /* Trending Section */
-.scroll-container{
+.scroll-main {
+  /* display: flex; */
+  flex: 1;
   width: 100%;
-  white-space: nowrap;
+}
+
+.scroll-container {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   overflow: auto;
+  gap: 10px;
+  margin-top: 20px;
+}
+/* .scroll-container::-webkit-scrollbar {
+  width: 0;
+} */
+.scroll-card > p {
+  margin: 20px 0;
+}
+.link-scroll {
+  width: 100%;
+}
+.scroll-card > img {
+  width: 100%;
+}
+
+/* Scroll-move */
+.scroll-info {
+  display: flex;
+  justify-content: space-between;
+}
+.scroll-icon {
+  display: flex;
+  gap: 10px;
+}
+.scroll-icon > div > img {
+  width: 70%;
+}
+.icon-left,
+.icon-right {
+  background-color: rgb(229, 231, 231);
+  width: 35px;
+  height: 35px;
+  padding: 3px;
+}
+
+/* Feature Section */
+.feature > p{
+  margin: 40px 0;
+}
+.feature-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-content: space-between;
+}
+.imgFeature {
+  background-color: aquamarine;
+  max-width: 1000px;
+}
+.imgFeature > img {
+  width: 100%;
 }
