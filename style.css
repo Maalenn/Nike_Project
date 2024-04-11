@@ -299,9 +299,10 @@ input:focus {
   /* display: flex; */
   flex: 1;
   width: 100%;
+  margin-top: 40px;
 }
 
-.scroll-container {
+.scroll-container, .scroll-container1 , .scroll-container2 {
   /* display: flex; */
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -315,13 +316,6 @@ input:focus {
 .scroll-card > p {
   margin: 20px 0;
 }
-.link-scroll {
-  width: 100%;
-}
-.scroll-card > img {
-  width: 100%;
-}
-
 /* Scroll-move */
 .scroll-info {
   display: flex;
@@ -343,7 +337,7 @@ input:focus {
 }
 
 /* Feature Section */
-.feature > p{
+.feature > p {
   margin: 40px 0;
 }
 .feature-main {
@@ -353,9 +347,17 @@ input:focus {
   justify-content: space-between;
 }
 .imgFeature {
-  background-color: aquamarine;
   max-width: 1000px;
+  background-repeat: no-repeat;
 }
 .imgFeature > img {
   width: 100%;
+}
+
+.scroll-container1 {
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.scroll-container2 {
+  grid-template-columns: repeat(10, 1fr);
 }
